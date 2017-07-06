@@ -1,0 +1,33 @@
+{
+  "name": "faucet-pipeline-css",
+  "version": "0.1.0",
+  "description": "CSS Asset Pipeline",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "eslint --cache bin/faucet-css lib/* && echo ✓"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faucet-pipeline/faucet-pipeline-css.git"
+  },
+  "author": "Lucas Dohmen <lucas@dohmen.io> (https://lucas.dohmen.io/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/faucet-pipeline/faucet-pipeline-css/issues"
+  },
+  "homepage": "https://github.com/faucet-pipeline/faucet-pipeline-css#readme",
+  "dependencies": {
+    "chokidar": "^1.7.0",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}

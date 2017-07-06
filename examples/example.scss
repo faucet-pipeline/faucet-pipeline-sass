@@ -1,0 +1,11 @@
+@import './lib';
+
+$a: 12px;
+
+.a {
+  padding: $a;
+
+  .b {
+    @extend %test;
+  }
+}

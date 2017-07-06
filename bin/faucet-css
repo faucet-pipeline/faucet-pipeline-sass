@@ -1,0 +1,49 @@
+#!/usr/bin/env node
+'use strict'
+
+let parseArgs = require('minimist')
+let bundle = require('../lib')
+
+let rootDir = process.cwd()
+let options = parseArgs(process.argv.slice(2), {
+  alias: {
+    c: 'config',
+    m: 'minify',
+    w: 'watch',
+    h: 'help'
+  },
+  default: {
+    'fingerprint': true,
+    'config': 'faucet.js'
+  },
+  boolean: [
+    'minify',
+    'watch',
+    'fingerprint'
+  ]
+})
+
+if (options.help) {
+  console.log([
+    'Usage: faucet-css [options]',
+    '',
+    'Options:',
+    '-h, --help: Show this help text',
+    '-c, --config: The config file (default: faucet.js)',
+    '-m, --minify: Minify the resulting files (default: false)',
+    '-w, --watch: Watch for changes and recompile automatically (default: false)',
+    '--no-fingerprint: Do not fingerprint the resulting files (default: fingerprint them)'
+  ].join('\n'))
+  process.exit()
+}
+
+if (options.watch) {
+  console.error(`monitoring file system at ${rootDir}`)
+
+  if (options.fingerprint) {
+    console.error('you might consider using `--no-fingerprint` to avoid ' +
+      'littering your file system with obsolete bundles')
+  }
+}
+
+bundle(rootDir, options)
