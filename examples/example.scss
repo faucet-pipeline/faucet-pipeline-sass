@@ -4,6 +4,7 @@ $a: 12px;
 
 .a {
   padding: $a;
+  display: flex;
 
   .b {
     @extend %test;
