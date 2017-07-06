@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/faucet-pipeline/faucet-pipeline-css#readme",
   "dependencies": {
+    "autoprefixer": "^7.1.2",
     "chokidar": "^1.7.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
