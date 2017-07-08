@@ -8,5 +8,6 @@ $a: 12px;
 
   .b {
     @extend %test;
+    background-image: asset-url("image.jpg")
   }
 }
