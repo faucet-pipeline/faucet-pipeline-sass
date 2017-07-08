@@ -5,6 +5,9 @@ module.exports = {
       file: './css.json',
       baseURI: '/assets'
     },
+    assets: [
+      './images.json'
+    ],
     prefixes: {
       browsers: [
         'last 2 versions',
