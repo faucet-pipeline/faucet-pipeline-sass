@@ -1,5 +1,5 @@
 /node_modules
 /.eslintcache
 
-/examples/css.json
-/examples/output/
+/samples/css.json
+/samples/output/
