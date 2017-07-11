@@ -4,7 +4,7 @@
   "description": "CSS Asset Pipeline",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint --cache lib && echo ✓"
+    "test": "eslint --cache lib samples && echo ✓"
   },
   "repository": {
     "type": "git",
