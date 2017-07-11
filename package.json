@@ -4,7 +4,7 @@
   "description": "CSS Asset Pipeline",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint --cache bin/faucet-css lib/* && echo ✓"
+    "test": "eslint --cache lib && echo ✓"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,8 @@
   "homepage": "https://github.com/faucet-pipeline/faucet-pipeline-css#readme",
   "dependencies": {
     "autoprefixer": "^7.1.2",
-    "minimist": "^1.2.0",
+    "faucet-pipeline-cli": "^0.8.1",
     "mkdirp": "^0.5.1",
-    "nite-owl": "^1.0.0",
     "node-sass": "^4.5.3"
   },
   "devDependencies": {
