@@ -1,5 +1,5 @@
 module.exports = {
-	css: {
+	sass: {
 		targetDir: "./output",
 		manifest: {
 			file: "./css.json",
