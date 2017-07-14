@@ -16,10 +16,12 @@ module.exports = {
 		},
 		bundles: [
 			{
-				entryPoint: "./example.scss"
+				entryPoint: "./example.scss",
+				target: "example.css"
 			},
 			{
-				entryPoint: "./example2.scss"
+				entryPoint: "./example2.scss",
+				target: "example2.css"
 			}
 		]
 	}
