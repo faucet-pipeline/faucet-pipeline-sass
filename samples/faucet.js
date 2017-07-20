@@ -21,7 +21,7 @@ module.exports = {
 			},
 			{
 				entryPoint: "./example2.scss",
-				target: "example2.css"
+				target: "subfolder/example2.css"
 			}
 		]
 	}
