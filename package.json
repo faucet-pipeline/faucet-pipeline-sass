@@ -25,6 +25,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^4.1.1",
-		"eslint-config-fnd": "^1.1.1"
+		"eslint-config-fnd": "^1.1.1",
+		"release-util-fnd": "^1.0.2"
 	}
 }
