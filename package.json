@@ -19,7 +19,7 @@
 	"dependencies": {
 		"autoprefixer": "^7.1.2",
 		"faucet-pipeline": "^0.10.1",
-		"faucet-pipeline-util": "^0.8.0",
+		"faucet-pipeline-util": "^0.10.3",
 		"mkdirp": "^0.5.1",
 		"node-sass": "^4.5.3"
 	},
