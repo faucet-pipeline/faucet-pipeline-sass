@@ -24,8 +24,8 @@
 		"node-sass": "^4.5.3"
 	},
 	"devDependencies": {
-		"eslint": "^4.1.1",
-		"eslint-config-fnd": "^1.1.1",
+		"eslint": "^4.3.0",
+		"eslint-config-fnd": "^1.2.0",
 		"release-util-fnd": "^1.0.2"
 	}
 }
