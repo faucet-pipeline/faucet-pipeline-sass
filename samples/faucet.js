@@ -1,6 +1,5 @@
 module.exports = {
 	sass: {
-		targetDir: "./output",
 		manifest: {
 			file: "./css.json",
 			baseURI: "/assets"
@@ -17,11 +16,11 @@ module.exports = {
 		bundles: [
 			{
 				entryPoint: "./example.scss",
-				target: "example.css"
+				target: "output/example.css"
 			},
 			{
 				entryPoint: "./example2.scss",
-				target: "subfolder/example2.css"
+				target: "output/subfolder/example2.css"
 			}
 		]
 	}
