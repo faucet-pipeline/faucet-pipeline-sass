@@ -6,8 +6,6 @@ module.exports = {
 			file: "./dist/manifest.json",
 			baseURI: "/assets"
 		},
-		assets: [],
-		prefixes: {},
 		bundles: [{
 			entryPoint: "src/foo.scss",
 			target: "dist/foo.css"

@@ -9,7 +9,6 @@ module.exports = {
 		assets: [
 			"./images.json"
 		],
-		prefixes: {},
 		bundles: [{
 			entryPoint: "src/index.scss",
 			target: "dist/bundle.css"
