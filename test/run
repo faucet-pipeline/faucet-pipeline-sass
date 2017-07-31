@@ -81,4 +81,10 @@ begin "./test_prefix"
 	assert_identical "./dist/manifest.json" "./expected.json"
 end
 
+begin "./test_base_uri"
+	faucet --no-fingerprint
+	assert_identical "./dist/bundle.css" "./expected.css"
+	assert_identical "./dist/manifest.json" "./expected.json"
+end
+
 echo
