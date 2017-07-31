@@ -6,7 +6,6 @@ module.exports = {
 			file: "./dist/manifest.json",
 			baseURI: "/assets"
 		},
-		assets: [],
 		prefixes: {
 			browsers: [
 				"IE 10"
