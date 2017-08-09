@@ -36,6 +36,15 @@ function assert_manifest {
 			fail "manifest \`$manifest_path\` does not contain \`$json\`"
 }
 
+function assert_missing {
+	filepath="${1:?}"
+	if [ -f "$filepath" ]; then
+		fail "file \`$filepath\` should not exist"
+	else
+		true
+	fi
+}
+
 function fail {
 	msg="${1:?}"
 	echo; echo "FAILURE: $msg"
@@ -47,7 +56,7 @@ cd "$root/test"
 begin "./test_basic"
 	faucet --no-fingerprint
 	assert_identical "./dist/bundle.css" "./expected.css"
-	assert_identical "./dist/manifest.json" "./expected.json"
+	assert_missing "./expected.json"
 end
 
 begin "./test_fingerprinting"

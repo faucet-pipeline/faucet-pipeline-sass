@@ -2,10 +2,7 @@
 
 module.exports = {
 	sass: {
-		manifest: {
-			file: "./dist/manifest.json",
-			baseURI: "/assets"
-		},
+		manifest: false,
 		bundles: [{
 			entryPoint: "src/index.scss",
 			target: "dist/bundle.css"
