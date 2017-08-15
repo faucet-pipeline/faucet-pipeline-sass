@@ -1,6 +1,6 @@
 {
 	"name": "faucet-pipeline-sass",
-	"version": "0.6.1",
+	"version": "0.7.0",
 	"description": "Sass Asset Pipeline",
 	"main": "lib/index.js",
 	"scripts": {
@@ -18,7 +18,7 @@
 	"homepage": "https://github.com/faucet-pipeline/faucet-pipeline-sass#readme",
 	"dependencies": {
 		"autoprefixer": "^7.1.2",
-		"faucet-pipeline": "^0.11.0",
+		"faucet-pipeline": "^0.12.0",
 		"faucet-pipeline-util": "^0.10.3",
 		"node-sass": "^4.5.3"
 	},
@@ -26,6 +26,6 @@
 		"eslint": "^4.4.1",
 		"eslint-config-fnd": "^1.2.0",
 		"node-hook": "^1.0.0",
-		"release-util-fnd": "^1.0.3"
+		"release-util-fnd": "^1.0.5"
 	}
 }
