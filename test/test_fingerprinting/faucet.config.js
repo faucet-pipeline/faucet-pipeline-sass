@@ -1,14 +1,12 @@
 "use strict";
 
 module.exports = {
-	sass: {
-		manifest: {
-			file: "./dist/manifest.json",
-			baseURI: "/assets"
-		},
-		bundles: [{
-			entryPoint: "src/index.scss",
-			target: "dist/bundle.css"
-		}]
+	sass: [{
+		entryPoint: "src/index.scss",
+		target: "dist/bundle.css"
+	}],
+	manifest: {
+		file: "./dist/manifest.json",
+		baseURI: "/assets"
 	}
 };

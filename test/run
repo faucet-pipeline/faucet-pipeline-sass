@@ -85,12 +85,6 @@ begin "./test_compact"
 	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
-begin "./test_assets"
-	faucet --no-fingerprint
-	assert_identical "./dist/bundle.css" "./expected.css"
-	assert_identical_json "./dist/manifest.json" "./expected.json"
-end
-
 begin "./test_prefix"
 	faucet --no-fingerprint
 	assert_identical "./dist/bundle.css" "./expected.css"
