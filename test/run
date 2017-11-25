@@ -26,6 +26,13 @@ function assert_identical {
 			fail "files \`$actual\` and \`$expected\` are not identical"
 }
 
+function assert_identical_json {
+	actual="${1:?}"
+	expected="${2:?}"
+	json-diff "$expected" "$actual" || \
+			fail "files \`$actual\` and \`$expected\` are not identical"
+}
+
 function assert_manifest {
 	asset_path="${1:?}"
 	uri="${2:?}"
@@ -62,38 +69,38 @@ end
 begin "./test_fingerprinting"
 	faucet
 	assert_identical "./dist/bundle-0240c59df06ce5a13dfa95cad19eab81.css" "./expected.css"
-	assert_identical "./dist/manifest.json" "./expected.json"
+	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
 begin "./test_multi"
 	faucet --no-fingerprint
 	assert_identical "./dist/foo.css" "./expected_foo.css"
 	assert_identical "./dist/bar.css" "./expected_bar.css"
-	assert_identical "./dist/manifest.json" "./expected.json"
+	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
 begin "./test_compact"
 	faucet --no-fingerprint --compact
 	assert_identical "./dist/bundle.css" "./expected.css"
-	assert_identical "./dist/manifest.json" "./expected.json"
+	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
 begin "./test_assets"
 	faucet --no-fingerprint
 	assert_identical "./dist/bundle.css" "./expected.css"
-	assert_identical "./dist/manifest.json" "./expected.json"
+	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
 begin "./test_prefix"
 	faucet --no-fingerprint
 	assert_identical "./dist/bundle.css" "./expected.css"
-	assert_identical "./dist/manifest.json" "./expected.json"
+	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
 begin "./test_base_uri"
 	faucet --no-fingerprint
 	assert_identical "./dist/bundle.css" "./expected.css"
-	assert_identical "./dist/manifest.json" "./expected.json"
+	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
 echo
