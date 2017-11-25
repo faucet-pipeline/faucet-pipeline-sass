@@ -66,6 +66,11 @@ begin "./test_basic"
 	assert_missing "./expected.json"
 end
 
+begin "./test_errors"
+	faucet --no-fingerprint || echo "Crashed successfully"
+	assert_identical "./dist/bundle.css" "./expected.css"
+end
+
 begin "./test_fingerprinting"
 	faucet
 	assert_identical "./dist/bundle-0240c59df06ce5a13dfa95cad19eab81.css" "./expected.css"
