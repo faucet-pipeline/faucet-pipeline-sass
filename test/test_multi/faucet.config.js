@@ -2,14 +2,14 @@
 
 module.exports = {
 	sass: [{
-		entryPoint: "src/foo.scss",
-		target: "dist/foo.css"
+		source: "./src/foo.scss",
+		target: "./dist/foo.css"
 	}, {
-		entryPoint: "src/bar.scss",
-		target: "dist/bar.css"
+		source: "./src/bar.scss",
+		target: "./dist/bar.css"
 	}],
 	manifest: {
 		file: "./dist/manifest.json",
-		baseURI: "/assets"
+		value: f => `/assets/${f}`
 	}
 };

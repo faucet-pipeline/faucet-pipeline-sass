@@ -1,4 +1,5 @@
 "use strict";
+let path = require("path");
 
 module.exports = {
 	sass: [{
@@ -7,6 +8,6 @@ module.exports = {
 	}],
 	manifest: {
 		file: "./dist/manifest.json",
-		value: f => `/assets/${f}`
+		key: (f, targetDir) => path.relative(targetDir, f)
 	}
 };

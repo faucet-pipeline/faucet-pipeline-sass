@@ -1,13 +1,13 @@
 "use strict";
+let path = require("path");
 
 module.exports = {
 	sass: [{
-		entryPoint: "src/index.scss",
-		target: "dist/bundle.css"
+		source: "./src/index.scss",
+		target: "./dist/bundle.css"
 	}],
 	manifest: {
 		file: "./dist/manifest.json",
-		baseURI: (bundlePath, baseName) =>
-			`/assets/${baseName}`
+		value: f => `/assets/${path.relative("./dist", f)}`
 	}
 };

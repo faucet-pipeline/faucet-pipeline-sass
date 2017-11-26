@@ -61,44 +61,55 @@ function fail {
 cd "$root/test"
 
 begin "./test_basic"
-	faucet --no-fingerprint
+	faucet
 	assert_identical "./dist/bundle.css" "./expected.css"
 	assert_missing "./expected.json"
 end
 
 begin "./test_errors"
-	faucet --no-fingerprint || echo "Crashed successfully"
+	faucet || echo "Crashed successfully"
 	assert_identical "./dist/bundle.css" "./expected.css"
 end
 
 begin "./test_fingerprinting"
-	faucet
+	faucet --fingerprint
 	assert_identical "./dist/bundle-0240c59df06ce5a13dfa95cad19eab81.css" "./expected.css"
 	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
 begin "./test_multi"
-	faucet --no-fingerprint
+	faucet
 	assert_identical "./dist/foo.css" "./expected_foo.css"
 	assert_identical "./dist/bar.css" "./expected_bar.css"
 	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
 begin "./test_compact"
-	faucet --no-fingerprint --compact
+	faucet --compact
 	assert_identical "./dist/bundle.css" "./expected.css"
 	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
 begin "./test_prefix"
-	faucet --no-fingerprint
+	faucet
 	assert_identical "./dist/bundle.css" "./expected.css"
 	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
 begin "./test_base_uri"
-	faucet --no-fingerprint
+	faucet
 	assert_identical "./dist/bundle.css" "./expected.css"
+	assert_identical_json "./dist/manifest.json" "./expected.json"
+end
+
+begin "./test_static_integration"
+	faucet --fingerprint
+	assert_identical "./dist/bundle-b28171743fab7b46cd98c3de0b5c39a6.css" "./expected.css"
+	assert_identical_json "./dist/manifest.json" "./expected.json"
+end
+
+begin "./test_key_config"
+	faucet --fingerprint
 	assert_identical_json "./dist/manifest.json" "./expected.json"
 end
 
