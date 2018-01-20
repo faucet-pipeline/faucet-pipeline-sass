@@ -9,5 +9,8 @@ module.exports = {
 	manifest: {
 		file: "./dist/manifest.json",
 		value: f => `/assets/${path.relative("./dist", f)}`
+	},
+	plugins: {
+		"sass": path.resolve("../..")
 	}
 };

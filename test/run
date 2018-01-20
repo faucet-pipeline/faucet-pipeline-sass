@@ -1,116 +1,62 @@
 #!/usr/bin/env bash
-
-set -e
+set -euo pipefail
 
 root=`dirname "$0"`
-root=`realpath "$root/.."`
-. "$root/test/local.sh"
+root=`realpath "$root"`
 
-function begin {
-	test_dir="${1:?}"
-	echo; echo `basename "$test_dir"`
-	pushd "$test_dir" > /dev/null
-}
+. "$root/../node_modules/faucet-pipeline/test/cli_harness.sh"
 
-function end {
-	bundles_dir=${1:-"./dist"}
-	rm -r "$bundles_dir"
-	popd > /dev/null
-}
-
-function assert_identical {
-	actual="${1:?}"
-	expected="${2:?}"
-	# NB: `git diff` provides colorization (dependent on configuration)
-	git diff --no-index "$expected" "$actual" || \
-			fail "files \`$actual\` and \`$expected\` are not identical"
-}
-
-function assert_identical_json {
-	actual="${1:?}"
-	expected="${2:?}"
-	json-diff "$expected" "$actual" || \
-			fail "files \`$actual\` and \`$expected\` are not identical"
-}
-
-function assert_manifest {
-	asset_path="${1:?}"
-	uri="${2:?}"
-	manifest_path=${3:-"./dist/manifest.json"}
-
-	json="\"$asset_path\":\"$uri\""
-	grep -q "$json" "$manifest_path" || \
-			fail "manifest \`$manifest_path\` does not contain \`$json\`"
-}
-
-function assert_missing {
-	filepath="${1:?}"
-	if [ -f "$filepath" ]; then
-		fail "file \`$filepath\` should not exist"
-	else
-		true
-	fi
-}
-
-function fail {
-	msg="${1:?}"
-	echo; echo "FAILURE: $msg"
-	false
-}
-
-cd "$root/test"
-
-begin "./test_basic"
+begin "$root/test_basic"
 	faucet
 	assert_identical "./dist/bundle.css" "./expected.css"
 	assert_missing "./expected.json"
 end
 
-begin "./test_errors"
+begin "$root/test_errors"
 	faucet || echo "Crashed successfully"
 	assert_identical "./dist/bundle.css" "./expected.css"
 end
 
-begin "./test_fingerprinting"
+begin "$root/test_fingerprinting"
 	faucet --fingerprint
 	assert_identical "./dist/bundle-0240c59df06ce5a13dfa95cad19eab81.css" "./expected.css"
-	assert_identical_json "./dist/manifest.json" "./expected.json"
+	assert_json "./dist/manifest.json" "./expected.json"
 end
 
-begin "./test_multi"
+begin "$root/test_multi"
 	faucet
 	assert_identical "./dist/foo.css" "./expected_foo.css"
 	assert_identical "./dist/bar.css" "./expected_bar.css"
-	assert_identical_json "./dist/manifest.json" "./expected.json"
+	assert_json "./dist/manifest.json" "./expected.json"
 end
 
-begin "./test_compact"
+begin "$root/test_compact"
 	faucet --compact
 	assert_identical "./dist/bundle.css" "./expected.css"
-	assert_identical_json "./dist/manifest.json" "./expected.json"
+	assert_json "./dist/manifest.json" "./expected.json"
 end
 
-begin "./test_prefix"
+begin "$root/test_prefix"
 	faucet
 	assert_identical "./dist/bundle.css" "./expected.css"
-	assert_identical_json "./dist/manifest.json" "./expected.json"
+	assert_json "./dist/manifest.json" "./expected.json"
 end
 
-begin "./test_base_uri"
+begin "$root/test_base_uri"
 	faucet
 	assert_identical "./dist/bundle.css" "./expected.css"
-	assert_identical_json "./dist/manifest.json" "./expected.json"
+	assert_json "./dist/manifest.json" "./expected.json"
 end
 
-begin "./test_static_integration"
+begin "$root/test_static_integration"
 	faucet --fingerprint
 	assert_identical "./dist/bundle-b28171743fab7b46cd98c3de0b5c39a6.css" "./expected.css"
-	assert_identical_json "./dist/manifest.json" "./expected.json"
+	assert_json "./dist/manifest.json" "./expected.json"
 end
 
-begin "./test_key_config"
+begin "$root/test_key_config"
 	faucet --fingerprint
-	assert_identical_json "./dist/manifest.json" "./expected.json"
+	assert_json "./dist/manifest.json" "./expected.json"
 end
 
-echo
+echo; echo "SUCCESS: all tests passed"
