@@ -14,6 +14,6 @@ module.exports = {
 		value: f => `/assets/${f}`
 	},
 	plugins: {
-		"sass": path.resolve("../..")
+		sass: path.resolve("../..")
 	}
 };

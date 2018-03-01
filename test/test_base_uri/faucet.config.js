@@ -11,6 +11,6 @@ module.exports = {
 		value: f => `/assets/${path.relative("./dist", f)}`
 	},
 	plugins: {
-		"sass": path.resolve("../..")
+		sass: path.resolve("../..")
 	}
 };
