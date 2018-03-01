@@ -42,6 +42,18 @@ begin "$root/test_prefix"
 	assert_json "./dist/manifest.json" "./expected.json"
 end
 
+begin "$root/test_no_prefix"
+	faucet
+	assert_identical "./dist/bundle.css" "./expected.css"
+	assert_json "./dist/manifest.json" "./expected.json"
+end
+
+begin "$root/test_prefix_with_different_browserslist"
+	faucet
+	assert_identical "./dist/bundle.css" "./expected.css"
+	assert_json "./dist/manifest.json" "./expected.json"
+end
+
 begin "$root/test_base_uri"
 	faucet
 	assert_identical "./dist/bundle.css" "./expected.css"
