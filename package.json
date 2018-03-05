@@ -20,7 +20,7 @@
 	"homepage": "http://www.faucet-pipeline.org",
 	"dependencies": {
 		"autoprefixer": "^8.0.0",
-		"faucet-pipeline": "1.0.0-rc.1",
+		"faucet-pipeline": "1.0.0-rc.2",
 		"node-sass": "^4.7.2"
 	},
 	"devDependencies": {
