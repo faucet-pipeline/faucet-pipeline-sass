@@ -10,7 +10,7 @@ module.exports = {
 		target: "./dist/bar.css"
 	}],
 	manifest: {
-		file: "./dist/manifest.json",
+		target: "./dist/manifest.json",
 		value: f => `/assets/${f}`
 	},
 	plugins: {

@@ -11,7 +11,7 @@ module.exports = {
 		target: "./dist/spacer.gif"
 	}],
 	manifest: {
-		file: "./dist/manifest.json",
+		target: "./dist/manifest.json",
 		value: f => `/assets/${f}`
 	},
 	plugins: {

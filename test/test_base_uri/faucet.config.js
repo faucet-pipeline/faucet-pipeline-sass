@@ -7,7 +7,7 @@ module.exports = {
 		target: "./dist/bundle.css"
 	}],
 	manifest: {
-		file: "./dist/manifest.json",
+		target: "./dist/manifest.json",
 		value: f => `/assets/${path.relative("./dist", f)}`
 	},
 	plugins: {

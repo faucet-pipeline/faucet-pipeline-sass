@@ -8,7 +8,7 @@ module.exports = {
 		browserslist: "development"
 	}],
 	manifest: {
-		file: "./dist/manifest.json",
+		target: "./dist/manifest.json",
 		value: f => `/assets/${f}`
 	},
 	plugins: {
