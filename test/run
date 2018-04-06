@@ -19,7 +19,8 @@ end
 
 begin "$root/test_fingerprinting"
 	faucet --fingerprint
-	assert_identical "./dist/bundle-0240c59df06ce5a13dfa95cad19eab81.css" "./expected.css"
+	assert_identical "./dist/fingerprint/bundle-0240c59df06ce5a13dfa95cad19eab81.css" "./expected.css"
+	assert_identical "./dist/no-fingerprint/bundle.css" "./expected.css"
 	assert_json "./dist/manifest.json" "./expected.json"
 end
 
