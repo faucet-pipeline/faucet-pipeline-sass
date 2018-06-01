@@ -72,4 +72,9 @@ begin "$root/test_key_config"
 	assert_json "./dist/manifest.json" "./expected.json"
 end
 
+begin "$root/test_sourcemap"
+	faucet --sourcemaps
+	assert_identical_sourcemap "./dist/bundle.css" "./expected.css" "./expected.css.map"
+end
+
 echo; echo "SUCCESS: all tests passed"
