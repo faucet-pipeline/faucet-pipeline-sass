@@ -19,14 +19,14 @@
 	},
 	"homepage": "http://www.faucet-pipeline.org",
 	"dependencies": {
-		"autoprefixer": "^8.4.1",
+		"autoprefixer": "^8.6.4",
 		"faucet-pipeline": "1.0.0-rc.7",
 		"node-sass": "^4.9.0",
-		"postcss": "^6.0.22"
+		"postcss": "^6.0.23"
 	},
 	"devDependencies": {
 		"eslint-config-fnd": "^1.4.0",
-		"eslint-plugin-import": "^2.12.0",
+		"eslint-plugin-import": "^2.13.0",
 		"faucet-pipeline-static": "~1.0.0-rc.5",
 		"json-diff": "^0.5.2",
 		"npm-run-all": "^4.1.3",
