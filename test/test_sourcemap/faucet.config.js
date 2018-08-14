@@ -7,6 +7,9 @@ module.exports = {
 		target: "./dist/bundle.css"
 	}],
 	plugins: {
-		sass: path.resolve("../..")
+		sass: {
+			plugin: path.resolve("../.."),
+			bucket: "styles"
+		}
 	}
 };
