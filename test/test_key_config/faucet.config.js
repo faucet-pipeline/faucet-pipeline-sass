@@ -11,6 +11,9 @@ module.exports = {
 		key: (f, targetDir) => path.relative(targetDir, f)
 	},
 	plugins: {
-		sass: path.resolve("../..")
+		sass: {
+			plugin: path.resolve("../.."),
+			bucket: "styles"
+		}
 	}
 };
