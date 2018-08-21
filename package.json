@@ -1,6 +1,6 @@
 {
 	"name": "faucet-pipeline-sass",
-	"version": "1.0.0-rc.6",
+	"version": "1.0.0-rc.7",
 	"description": "Sass Asset Pipeline",
 	"main": "lib/index.js",
 	"scripts": {
