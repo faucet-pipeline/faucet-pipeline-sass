@@ -1,5 +1,5 @@
 body:before {
-	content: "\26a0  CSS Error: Invalid CSS after '	color: $color;': expected '}', was ''";
+	content: "\26a0  CSS Error: expected '{'. src/index.scss 6:1 root stylesheet";
 	font-weight: bold;
 	display: block;
 	border: 5px solid red;
