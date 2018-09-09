@@ -12,6 +12,16 @@ begin "$root/test_basic"
 	assert_missing "./expected.json"
 end
 
+begin "$root/test_import_scss"
+	faucet
+	assert_identical "./dist/bundle.css" "./expected.css"
+end
+
+begin "$root/test_import_css"
+	faucet
+	assert_identical "./dist/bundle.css" "./expected.css"
+end
+
 begin "$root/test_errors"
 	faucet || echo "Crashed successfully"
 	assert_identical "./dist/bundle.css" "./expected.css"
@@ -19,7 +29,7 @@ end
 
 begin "$root/test_fingerprinting"
 	faucet --fingerprint
-	assert_identical "./dist/fingerprint/bundle-0240c59df06ce5a13dfa95cad19eab81.css" "./expected.css"
+	assert_identical "./dist/fingerprint/bundle-5819c88271a78d848df8b3991c74df09.css" "./expected.css"
 	assert_identical "./dist/no-fingerprint/bundle.css" "./expected.css"
 	assert_json "./dist/manifest.json" "./expected.json"
 end
@@ -63,7 +73,7 @@ end
 
 begin "$root/test_static_integration"
 	faucet --fingerprint
-	assert_identical "./dist/bundle-b28171743fab7b46cd98c3de0b5c39a6.css" "./expected.css"
+	assert_identical "./dist/bundle-3166b72ba211e69a0aab5bf612ded7d3.css" "./expected.css"
 	assert_json "./dist/manifest.json" "./expected.json"
 end
 
