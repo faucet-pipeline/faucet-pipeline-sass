@@ -21,8 +21,8 @@
 	"dependencies": {
 		"autoprefixer": "^9.0.2",
 		"faucet-pipeline-core": "~1.0.0-rc.13",
-		"node-sass": "^4.9.2",
-		"postcss": "^7.0.2"
+		"postcss": "^7.0.2",
+		"sass": "^1.13.0"
 	},
 	"devDependencies": {
 		"eslint-config-fnd": "^1.6.0",
