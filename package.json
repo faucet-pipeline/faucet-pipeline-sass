@@ -1,7 +1,7 @@
 {
 	"name": "faucet-pipeline-sass",
-	"version": "1.0.0-rc.9",
-	"description": "Sass Asset Pipeline",
+	"version": "1.0.0",
+	"description": "Sass for faucet-pipeline",
 	"main": "lib/index.js",
 	"scripts": {
 		"test": "npm-run-all --parallel lint test:cli",
@@ -17,17 +17,17 @@
 	"bugs": {
 		"url": "https://github.com/faucet-pipeline/faucet-pipeline-sass/issues"
 	},
-	"homepage": "http://www.faucet-pipeline.org",
+	"homepage": "https://www.faucet-pipeline.org",
 	"dependencies": {
-		"autoprefixer": "^9.0.2",
-		"faucet-pipeline-core": "~1.0.0-rc.13",
-		"postcss": "^7.0.2",
-		"sass": "^1.13.0"
+		"autoprefixer": "~9.0.2",
+		"faucet-pipeline-core": "^1.0.0",
+		"postcss": "~7.0.3",
+		"sass": "~1.14.0"
 	},
 	"devDependencies": {
 		"eslint-config-fnd": "^1.6.0",
 		"eslint-plugin-import": "^2.13.0",
-		"faucet-pipeline-static": "~1.0.0-rc.8",
+		"faucet-pipeline-static": "^1.0.0",
 		"json-diff": "^0.5.2",
 		"npm-run-all": "^4.1.3",
 		"release-util-fnd": "^1.1.1"
