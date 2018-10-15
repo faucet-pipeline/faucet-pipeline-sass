@@ -12,6 +12,12 @@ begin "$root/test_basic"
 	assert_missing "./expected.json"
 end
 
+begin "$root/test_wrong_config"
+	faucet || echo "Crashed successfully"
+	# TODO: More assertions
+	mkdir "./dist"
+end
+
 begin "$root/test_import_scss"
 	faucet
 	assert_identical "./dist/bundle.css" "./expected.css"
