@@ -10,5 +10,5 @@ _2018-11-15_
 * Bugfix: Actually return a promise from the pipeline
     * This bugfix lets "markup" pipelines run after this pipeline, as it was
       supposed to work
-* Update dependencies: autoprefixer, sass and postcss
+* Update dependencies: Sass, Autoprefixer und PostCSS
 * Added license, code of conduct and changelog
