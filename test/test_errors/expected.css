@@ -1,5 +1,5 @@
 body:before {
-	content: "\26a0  CSS Error: expected '{'. ^ src/index.scss 6:1 root stylesheet";
+	content: "\26a0  CSS Error: expected '}'. ╷ 4 │ color: $color; │ ^ ╵ src/index.scss 4:16 root stylesheet";
 	font-weight: bold;
 	display: block;
 	border: 5px solid red;
