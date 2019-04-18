@@ -1,6 +1,13 @@
 faucet-pipeline-sass version history
 ==================================
 
+v1.2.0
+------
+
+_2019-04-18_
+
+* Update dependencies: Sass, Autoprefixer und PostCSS
+* Housekeeping
 
 v1.1.0
 ------
