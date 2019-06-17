@@ -1,6 +1,14 @@
 faucet-pipeline-sass version history
 ==================================
 
+v1.3.0
+------
+
+_2019-06-17_
+
+* Drop support for Node 6
+* Update dependencies: Sass, Autoprefixer und PostCSS
+
 v1.2.0
 ------
 
