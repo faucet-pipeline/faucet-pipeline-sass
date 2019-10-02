@@ -22,7 +22,7 @@
 		"autoprefixer": "~9.6.1",
 		"faucet-pipeline-core": "^1.0.0",
 		"postcss": "~7.0.17",
-		"sass": "~1.22.3"
+		"sass": "~1.23.0"
 	},
 	"devDependencies": {
 		"eslint-config-fnd": "^1.7.0",
