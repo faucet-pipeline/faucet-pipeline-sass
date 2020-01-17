@@ -10,10 +10,5 @@ module.exports = {
 		target: "./dist/manifest.json",
 		value: f => `/assets/${f}`
 	},
-	plugins: {
-		sass: {
-			plugin: path.resolve("../.."),
-			bucket: "styles"
-		}
-	}
+	plugins: [path.resolve(__dirname, "../..")]
 };

@@ -6,10 +6,5 @@ module.exports = {
 		source: "./src/index.scss",
 		target: "./dist/bundle.css"
 	}],
-	plugins: {
-		sass: {
-			plugin: path.resolve("../.."),
-			bucket: "styles"
-		}
-	}
+	plugins: [path.resolve(__dirname, "../..")]
 };
