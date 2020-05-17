@@ -19,7 +19,7 @@
 	},
 	"homepage": "https://www.faucet-pipeline.org",
 	"dependencies": {
-		"autoprefixer": "~9.7.4",
+		"autoprefixer": "~9.8.0",
 		"faucet-pipeline-core": "^1.4.0",
 		"postcss": "~7.0.27",
 		"sass": "~1.26.3"
