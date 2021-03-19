@@ -2,6 +2,14 @@ faucet-pipeline-sass version history
 ==================================
 
 
+v1.5.0
+------
+
+_2021-03-19_
+
+Maintenance release to update dependencies; no significant changes
+
+
 v1.4.0
 ------
 
