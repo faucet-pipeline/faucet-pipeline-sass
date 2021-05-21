@@ -2,6 +2,15 @@ faucet-pipeline-sass version history
 ==================================
 
 
+v1.6.0
+------
+
+_2021-05-21_
+
+* Maintenance release to update dependencies
+* Drop support for Node 10, add support for Node 16
+
+
 v1.5.0
 ------
 
