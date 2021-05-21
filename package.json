@@ -21,7 +21,7 @@
 	"dependencies": {
 		"autoprefixer": "~10.2.5",
 		"faucet-pipeline-core": "^1.4.0",
-		"postcss": "~8.2.8",
+		"postcss": "~8.3.0",
 		"sass": "~1.33.0"
 	},
 	"devDependencies": {
