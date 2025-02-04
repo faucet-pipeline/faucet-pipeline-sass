@@ -1,6 +1,15 @@
 faucet-pipeline-sass version history
 ==================================
 
+v1.9.1
+------
+
+_2025-02-05_
+
+* Fix watch mode
+* Reduced dev dependencies
+
+
 v1.9.0
 ------
 
