@@ -1,6 +1,15 @@
 faucet-pipeline-sass version history
 ==================================
 
+v1.9.2
+------
+
+_2025-02-07_
+
+* Fix watch mode for autoprefixer
+* Update dependencies
+
+
 v1.9.1
 ------
 
