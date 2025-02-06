@@ -1,6 +1,6 @@
 {
 	"name": "faucet-pipeline-sass",
-	"version": "1.9.1",
+	"version": "1.9.2",
 	"description": "Sass for faucet-pipeline",
 	"main": "lib/index.js",
 	"scripts": {
