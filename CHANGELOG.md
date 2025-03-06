@@ -1,6 +1,16 @@
 faucet-pipeline-sass version history
 ==================================
 
+
+v1.10.0
+-------
+
+_TBD_
+
+* Maintenance release to update dependencies
+* Bumpe Node requirement to v20 or later, dropping support for obsolete versions
+
+
 v1.9.2
 ------
 

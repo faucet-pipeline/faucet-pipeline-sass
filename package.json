@@ -1,6 +1,6 @@
 {
 	"name": "faucet-pipeline-sass",
-	"version": "1.9.2",
+	"version": "1.10.0",
 	"description": "Sass for faucet-pipeline",
 	"main": "lib/index.js",
 	"scripts": {
@@ -19,18 +19,18 @@
 	},
 	"homepage": "https://www.faucet-pipeline.org",
 	"engines": {
-		"node": ">= 18"
+		"node": ">= 20"
 	},
 	"dependencies": {
 		"autoprefixer": "~10.4.20",
 		"faucet-pipeline-core": "^2.0.0 || ^3.0.0",
-		"postcss": "~8.5.1",
+		"postcss": "~8.5.3",
 		"sass": "~1.85.1"
 	},
 	"devDependencies": {
 		"eslint-config-fnd": "^1.13.0",
-		"faucet-pipeline-static": "^2.0.0",
-		"json-diff": "^1.0.0",
+		"faucet-pipeline-static": "^2.1.0",
+		"json-diff": "^1.0.6",
 		"release-util-fnd": "^3.0.0"
 	}
 }
