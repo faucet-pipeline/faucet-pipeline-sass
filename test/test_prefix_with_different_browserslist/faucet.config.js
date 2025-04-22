@@ -5,7 +5,7 @@ module.exports = {
 	sass: [{
 		source: "./src/index.scss",
 		target: "./dist/bundle.css",
-		browserslist: "development"
+		browserslist: "legacy"
 	}],
 	manifest: {
 		target: "./dist/manifest.json",

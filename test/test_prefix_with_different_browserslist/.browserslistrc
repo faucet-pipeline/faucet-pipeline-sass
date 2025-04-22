@@ -1,5 +1,4 @@
-[default]
 chrome 64
 
-[development]
+[legacy]
 IE 10
