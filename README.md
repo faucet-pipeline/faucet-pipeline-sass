@@ -1,8 +1,4 @@
 # faucet-pipeline-sass
-[![npm](https://img.shields.io/npm/v/faucet-pipeline-sass.svg)](https://www.npmjs.com/package/faucet-pipeline-sass)
+This project has moved to Codeberg:
 
-See [faucet-pipeline.org](https://www.faucet-pipeline.org/sass) for documentation.
-
-## License
-
-faucet-pipeline-sass is licensed under Apache 2.0 License.
+<https://codeberg.org/faucet-pipeline/faucet-pipeline-sass>
